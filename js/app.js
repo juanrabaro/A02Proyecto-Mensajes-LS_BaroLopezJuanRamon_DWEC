@@ -4,7 +4,7 @@ const contenedorLista = document.querySelector("#lista-mensajes")
 var listaMensajes = []
 
 function cargaLocalStorage() {
-    listaMensajes = JSON.parse(localStorage.getItem("mensajes"))
+    listaMensajes = JSON.parse(localStorage.getItem("mensajes")) || []
     listaMensajes.forEach(mensaje => {
         const li = document.createElement("li")
         li.innerHTML = 
